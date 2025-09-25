@@ -3,7 +3,7 @@ package Step1.Lec4;
 public class reverse {
     static void reverseNum(int n){
         int sum=0;
-        while (n>0) {
+        while (n!=0) {
                 int last=n%10;
                  sum=sum*10+last;
                 n=n/10;
@@ -11,7 +11,7 @@ public class reverse {
         System.out.println(sum);
     }
     public static void main(String[] args) {
-        int n  = 123400;
+        int n  = 153423;
         reverseNum(n);
     }
     
