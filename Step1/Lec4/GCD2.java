@@ -1,7 +1,7 @@
 package Step1.Lec4;
 // optimal approach
+// time complexity O(log(min(a,b)))
 public class GCD2 {
-
     static void gcd(int a,int b){
         while(a>0 && b>0){
             if(a>b){
