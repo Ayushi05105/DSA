@@ -7,7 +7,7 @@ public class name {
         func(i+1,n);
     }
     public static void main(String[] args) {
-        int n =5;
+        int n =7;
         func(1, n);
     }
     
