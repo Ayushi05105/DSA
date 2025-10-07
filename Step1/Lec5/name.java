@@ -9,6 +9,6 @@ public class name {
     public static void main(String[] args) {
         int n =7;
         func(1, n);
-    }
+    }l
     
 }

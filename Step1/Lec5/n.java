@@ -1,8 +1,6 @@
 package Step1.Lec5;
 
-public class n {
-
-    static int cnt =0;
+public class n{
     static void print(){
         if(cnt == 7) return;
         System.out.print(cnt+" ");
