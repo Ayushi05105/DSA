@@ -9,7 +9,7 @@ public class findRepetedArray {
     public static void repetedArray(int[] arr) {
         Arrays.sort(arr);
         for (int i = 0; i < arr.length - 1; i++) {
-            if (arr[i] == arr[i + 1]) {
+            if (arr[i] == arr[i + 1] ) {
                 System.out.print(arr[i] + " ");
             }
         }
