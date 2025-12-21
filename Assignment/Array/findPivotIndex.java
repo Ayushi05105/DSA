@@ -41,6 +41,7 @@ public static void main(String[] args) {
     int ans = findPivot(arr);
     System.out.println("Index of pivot is: ");
     System.out.println(ans);
+    sc.close();
     
 }
     
