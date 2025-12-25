@@ -2,10 +2,10 @@ package Assignment.Array;
 
 public class MajorityElement {
 
-
+//moore's voting algorithm
      public static int majorityElement(int[] nums) {
        int cnt =0;
-       int el =0 ;
+       int el =0;
        for(int i =0;i<nums.length;i++){
         if(cnt == 0){
             cnt = 1;
