@@ -16,7 +16,6 @@ public class detectCycle141 {
         while(fast != null){
             if(slow == null) return false;
             slow = slow.next;
-            if(fast == null) return false;
             fast = fast.next.next;
             if(fast == slow ) return true;
         }
