@@ -5,6 +5,8 @@ import java.util.HashMap;
 
 public class twoSum {
 
+//brute force just two loop    
+//better solution    
     public static int[] twoSumLeet(int[] nums, int target) {
         HashMap<Integer,Integer> map = new HashMap<>();
         for(int i =0;i<nums.length;i++){
@@ -17,7 +19,8 @@ public class twoSum {
         return new int[]{-1,-1};
     }
 
-
+// optimal solution
+//greddy approach
     public static int[] TwoSum(int[] arr,int target){
         int n = arr.length;
         Arrays.sort(arr);
