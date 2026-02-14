@@ -48,7 +48,6 @@ public class union {
     public static void main(String[] args) {
         int[] arr1 ={1,2,3,4,7,5};
         int[] arr2 = {3,4,5,6,7,0};
-        union obj = new union();
         List<Integer> res = union.unionSortedArray(arr1,arr2);
         for(int val : res) System.out.print(val +" ");
     }
