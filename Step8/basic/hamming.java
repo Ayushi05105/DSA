@@ -19,4 +19,5 @@ public class hamming {
         System.out.println(hammingWeight(n));
     }
     
+    
 }
