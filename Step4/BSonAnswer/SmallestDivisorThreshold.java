@@ -1,3 +1,5 @@
+package Step4.BSonAnswer;
+
 public class SmallestDivisorThreshold {
     public static int smallestDivisor(int[] nums, int threshold) {
         int n = nums.length;
