@@ -1,4 +1,4 @@
-package Step4.BinarySearchOn2D;
+package Step4.BSonAnswer;
 
 public class sqrt {
     public static int floorSqrt(int n) {
