@@ -18,6 +18,7 @@ public class maxDepth {
         int rh = MaxDepth(root.right);
         return 1+Math.max(lh,rh);
     }
+    
 
     public static void main(String[] args) {
         Node root = new Node(1);
