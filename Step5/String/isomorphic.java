@@ -1,0 +1,28 @@
+package Step5.String;
+
+import java.util.HashMap;
+
+public class isomorphic {
+    public static boolean isomorphicString(String s, String t){
+        HashMap<Character,Character> map = new HashMap<>();
+        for(int i =0;i<s.length();i++){
+            char c1 = s.charAt(i);
+            char c2 = t.charAt(i);
+            if(map.containsKey(c1)){
+                if(map.get(c1)!=c2) return false;
+            }
+            else{
+                
+                map.put(c1,c2);
+            }
+        }
+        return true;
+    }
+    public static void main(String[] args) {
+        String s ="paper";
+        String t = "title";
+        boolean result = isomorphicString(s, t);
+        System.out.println(result);
+    }
+    
+}
