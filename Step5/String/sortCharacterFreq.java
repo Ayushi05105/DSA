@@ -1,11 +1,6 @@
 package Step5.String;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 
 public class sortCharacterFreq {
     public static String frequencySort(String s){
@@ -27,6 +22,36 @@ public class sortCharacterFreq {
             }
         }
         return res.toString();
+    }
+
+
+
+    // by bucket sort
+    public static String FreqSort(String s){
+        HashMap<Character,Integer> map = new HashMap<>();
+        for(char c:s.toCharArray()){
+            map.put(c, map.getOrDefault(c, 0)+1);
+        }
+        List<Character>[] bucket = new ArrayList[s.length()+1];
+        for(char key : map.keySet()){
+            int freq = map.get(key);
+            if(bucket[freq] == null){
+                bucket[freq] = new ArrayList<>();
+            }
+            bucket[freq].add(key);
+        }
+        StringBuilder res = new StringBuilder();
+        for(int i=bucket.length-1;i>=0;i--){
+            if(bucket[i]!=null){
+            for(char c:bucket[i]){
+                int freq = i;
+                while(freq-->0){
+                    res.append(c);
+                }
+            }
+        }
+    }
+    return res.toString();
     }
     public static void main(String[] args) {
         String s ="tree";
