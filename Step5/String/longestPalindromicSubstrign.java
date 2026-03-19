@@ -12,6 +12,8 @@ public class longestPalindromicSubstrign {
         return true;
     }
 
+
+    // o(n^3) solution
     public static String LongestPalindromicStr(String s){
         String ans ="";
         int n = s.length();
@@ -26,6 +28,20 @@ public class longestPalindromicSubstrign {
         }
         return ans;
     }
+
+    // public static String LongestPalindromicStr2(String s){
+    //     int n = s.length();
+    //     int low,high;
+    //     for(int i =1;i<n;i++){
+    //         low = i;
+    //         high = i;
+    //         while((low>=0 && high <n) && s.charAt(low) == s.charAt(high)){
+    //             low--;
+    //             high++;
+    //         }
+
+    //     }
+    // }
 
     public static void main(String[] args) {
         String s ="babad";
