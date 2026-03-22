@@ -17,7 +17,7 @@ public class subsetSum {
         return ds;        
     }
     public static void main(String[] args) {
-        ArrayList<Integer> arr = new ArrayList<>(Arrays.asList(3,1,2));
+        ArrayList<Integer> arr = new ArrayList<>(Arrays.asList(1,2,5));
         System.out.println(SubsetSum(arr, arr.size()));
     }
     
