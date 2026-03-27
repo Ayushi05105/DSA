@@ -1,7 +1,7 @@
 package step15;
 import java.util.*;
 
-public class cycle {
+public class cycleDirected {
 
     public static boolean dfsCheck(int node,ArrayList<ArrayList<Integer>> adj,int[] vis,int[] pathVis){
         vis[node]=1;
