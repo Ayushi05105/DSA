@@ -3,6 +3,7 @@ package Step16;
 import java.util.Arrays;
 
 
+
 public class kthFrogJump {
     public static int helper(int idx,int[] arr,int k,int[] dp){
         if(idx == 0) return 0;
@@ -39,11 +40,29 @@ public class kthFrogJump {
         return dp[n-1];
 
     }
+
+    public static int Tabulation(int n,int[] arr,int k){
+        int[] dp = new int[n];
+        dp[0] =0;
+        for(int i =1;i<n;i++){
+            int minStep = Integer.MAX_VALUE;
+            for(int j =1;j<=k;j++){
+                if(i-j>=0){
+                    int jump = dp[i-j] + Math.abs(arr[i]-arr[i-j]);
+                    minStep = Math.min(minStep,jump);
+                }
+            }
+            dp[i] = minStep;  
+        }
+        return dp[n-1];
+    }
     public static void main(String[] args) {
         int[] arr={5,7,8,20,34,90,21,54};
         int k =3;
+        int n = arr.length;
         System.out.println(frogJump(arr.length, arr, k));
         System.out.println(frogJump2(arr.length, arr, k));
+        System.out.println(Tabulation(n, arr, k));
     }
     
 }
