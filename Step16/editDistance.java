@@ -15,8 +15,7 @@ public class editDistance {
      }
 
      public static int editdistance(String s1,String s2){
-        int i = s1.length();
-        int j = s2.length();
+        
         return recursion(s1, s2, s1.length()-1, s2.length()-1);
      }
 
