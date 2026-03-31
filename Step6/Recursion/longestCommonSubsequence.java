@@ -17,11 +17,11 @@ public class longestCommonSubsequence {
         
     }
 
-    public static List<String> LongestCommon(String s1){
+    public static StringBuilder LongestCommon(String s1){
         List<String> result = new ArrayList<>();
         StringBuilder ans = new StringBuilder();
         // helper(0, 0, s1, result);
-        // return ans;
+         return ans;
 
     }
     
