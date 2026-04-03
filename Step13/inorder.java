@@ -1,7 +1,5 @@
 package Step13;
 
-import Step13.maxDepth.Node;
-
 public class inorder {
 
     public static class Node{
@@ -19,7 +17,7 @@ public class inorder {
         if(root.right != null) inorderTraversal(root.right);
     }
     public static void main(String[] args) {
-         Node root = new Node(1);
+        Node root = new Node(1);
         Node a = new Node(2);
         Node b = new Node(3);
         root.left = a;
