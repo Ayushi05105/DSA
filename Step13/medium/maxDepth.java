@@ -1,4 +1,4 @@
-package Step13;
+package Step13.medium;
 
 public class maxDepth {
     public static class Node{
