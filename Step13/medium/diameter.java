@@ -1,7 +1,5 @@
 package Step13.medium;
 
-
-
 public class diameter {
 
     public static class Node{
