@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class jj{
 public static boolean uniformArray(int[] nums1) {
         int n =nums1.length;
-        int[] arr =nums1;
+        //int[] arr =nums1;
         Arrays.sort(nums1);
         int min = nums1[0];
         int target = min%2;

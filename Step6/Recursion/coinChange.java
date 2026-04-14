@@ -20,7 +20,7 @@ public class coinChange {
     }
     public static void main(String[] args) {
         int[] coins ={2,4,10};
-        List<List<Integer>> ans = new ArrayList<>();
+        //List<List<Integer>> ans = new ArrayList<>();
         System.out.println(CoinChange(10, coins));
     }
     
