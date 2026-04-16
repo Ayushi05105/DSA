@@ -53,5 +53,29 @@ public class dijkstraPQ {
             System.out.print(val+" ");
         }
     }
+    // public static int[] helper(int vis,List<List<int[]>> adj,int src){
+    //     int[] dist = new int[vis];
+    //     Arrays.fill(dist,(int)1e9);
+    //     dist[src] =0;
+
+    //     PriorityQueue<int[]> pq = new PriorityQueue<>((a,b)->a[0]-b[0]);
+    //     pq.add(new int[]{0,src});
+
+    //     while(!pq.isEmpty()){
+    //         int[] curr = pq.poll();
+    //         int d = curr[0];
+    //         int node = curr[1];
+    //         if(d > dist[node]) continue;
+    //         for(int[] num : adj.get(node)){
+    //             int v = num[0];
+    //             int wt= num[1];
+    //             if(dist[node]+wt < dist[v]){
+    //                 dist[v] = dist[node] + wt;
+    //                 pq.add(new int[]{dist[v],v});
+    //             }
+    //         }
+    //     }
+    //     return dist;
+    // }
     
 }
