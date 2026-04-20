@@ -14,16 +14,19 @@ public class minMultiplication {
         Queue<Pair> q = new LinkedList<>();
         q.add(new Pair(start,0));
         int[] dist = new int[100000];
+
         for(int i =0;i<100000;i++){
             dist[i] =(int)1e9;
         }
         dist[start] =0;
         int mod = 100000;
         int n = arr.length;
+
         while(!q.isEmpty()){
             Pair p = q.poll();
             int node = p.first;
             int step = p.second;
+            
             for(int i =0;i<n;i++){
                 int num = (arr[i] * node) % mod;
                 if(step + 1 <dist[num]){
