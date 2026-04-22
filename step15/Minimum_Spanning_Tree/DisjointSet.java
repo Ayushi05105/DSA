@@ -4,10 +4,12 @@ public class DisjointSet {
 
         ArrayList<Integer> rank = new ArrayList<>();
         ArrayList<Integer> parent = new ArrayList<>();
+        ArrayList<Integer> size = new ArrayList<>();
         DisjointSet(int n){
             for(int i =0;i<=n;i++){
                 rank.add(0);
                 parent.add(i);
+                size.add(1);
 
             }
         }
@@ -35,13 +37,22 @@ public class DisjointSet {
                 parent.set(ulp_v,ulp_u);
                 int rank_U = rank.get(ulp_u);
                 parent.set(ulp_u,rank_U);
+                
             }
-
         }
 
         public void unionBySize(int u ,int v){
             int ulp_u = findUltimateParent(u);
             int ulp_v = findUltimateParent(v);
+            if(ulp_u == ulp_v) return;
+            if(size.get(ulp_u) < size.get(ulp_v)){
+                parent.set(ulp_u,ulp_v);
+                size.set(ulp_v,size.get(ulp_u)+size.get(ulp_v));
+            }
+            else{
+                parent.set(ulp_v,ulp_u);
+                size.set(ulp_u,size.get(ulp_u) + size.get(ulp_v));
+            }
             
         }
 
