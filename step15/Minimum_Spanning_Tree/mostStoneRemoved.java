@@ -25,6 +25,7 @@ public class mostStoneRemoved {
         else{
             parent[py] = px;
             rank[px]++;
+            
         }
     }
     public static int removeStones(int[][] stones) {
