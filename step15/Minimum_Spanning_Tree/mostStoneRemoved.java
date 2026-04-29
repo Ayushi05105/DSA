@@ -11,6 +11,7 @@ public class mostStoneRemoved {
         }
         return parent[x];
     }
+    
 
     public static void union(int[] parent,int[] rank, int x,int y){
         int px = findParent(parent,x);
