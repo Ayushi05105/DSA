@@ -19,7 +19,7 @@ public class frogJump {
     }
     public static void main(String[] args) {
         int[] arr={30,10,60,10,60,50};
-        int n = arr.length;
+        
         System.out.println(jump(arr.length, arr));
     }
     

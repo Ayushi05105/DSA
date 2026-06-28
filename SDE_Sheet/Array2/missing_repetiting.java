@@ -1,4 +1,4 @@
-package SDE_Sheet.Array2;
+
 import java.util.*;
 
 public class missing_repetiting {
