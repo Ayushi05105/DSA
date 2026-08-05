@@ -27,7 +27,7 @@ public class dijsktra {
         int V = 3, E = 3, S = 2;
 
         
-        ArrayList<int[]>[] adj = new ArrayList[V];
+        ArrayList<int[]>[] adj = new ArrayList<>[V];
         for (int i = 0; i < V; i++) {
             adj[i] = new ArrayList<>();
         }
