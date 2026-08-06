@@ -2,7 +2,13 @@ package graph;
 
 import java.util.*;
 
-class Pair{
+
+
+
+
+public class shortesPathDAG {
+
+    static class Pair{
     int first;
     int second;
     Pair(int f,int s){
@@ -10,10 +16,6 @@ class Pair{
         this.second = s;
     }
 }
-
-
-
-public class shortesPathDAG {
 
     public static void topoSort(int node,ArrayList<ArrayList<Pair>> adj,int[] vis,Stack<Integer> st){
     vis[node] = 1;
