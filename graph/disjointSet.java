@@ -4,12 +4,14 @@ import java.util.*;
 public class disjointSet {
     List<Integer> rank = new ArrayList<>();
     List<Integer> parent = new ArrayList<>();
+    List<Integer> size = new ArrayList<>();
 
     public  disjointSet(int n){
         for(int i =0;i<n;i++){
             rank.add(0);
             parent.add(i);
-        }
+            size.add(1);
+                }
     }
     
     public int findUlp(int node){
@@ -37,6 +39,19 @@ public class disjointSet {
             rank.set(ulp_u,rankU+1);
         }
     }
+    public void unionBySize(int u,int v){
+        int ulp_u = findUlp(u);
+        int ulp_v = findUlp(v);
+        if(ulp_u == ulp_v) return;
+        if(size.get(ulp_u) < size.get(ulp_v)){
+            parent.set(ulp_u,ulp_v);
+            size.set(ulp_v,size.get(ulp_u)+ulp_v);
+        }
+        else {
+            parent.set(ulp_v,ulp_u);
+            size.set(ulp_u,size.get(ulp_u)+size.get(ulp_v));
+        }
+    }
     public static void main(String[] args) {
         disjointSet ds = new disjointSet(7);
         ds.unionByRank(1, 2);
@@ -50,6 +65,7 @@ public class disjointSet {
             System.out.println("Not Same");
 
         ds.unionByRank(3, 6);
+        ds.unionBySize(3, 6);
 
         if (ds.findUlp(3) == ds.findUlp(6))
             System.out.println("Same");
